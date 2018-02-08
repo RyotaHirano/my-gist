@@ -1,20 +1,30 @@
 <template>
   <div id="app">
-    <Login/>
+    <Top/>
   </div>
 </template>
 
 <script>
-import Login from './components/Login'
+import Top from './components/Top'
 
 export default {
   name: 'app',
   components: {
-    Login
+    Top
   }
 }
 </script>
 
-<style>
-
+<style lang="scss">
+button,
+input,
+select,
+textarea {
+  outline: none;
+  appearance: none;
+  border-radius: 0;
+  &:focus {
+    outline: none;
+  }
+}
 </style>
