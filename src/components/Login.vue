@@ -9,7 +9,7 @@
     methods: {
       authGithub: function() {
         this.$store.dispatch('githubAuth').then(() => {
-          console.log(this.$store.state.githubAccessToken)
+          this.$router.push('user')
         })
       }
     }

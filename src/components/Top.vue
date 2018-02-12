@@ -1,7 +1,9 @@
 <template>
   <div class="container">
-    <h1>Login</h1>
-    <div class="login">
+    <div class="container__header">
+      <h1>Github Login</h1>
+    </div>
+    <div class="container__main">
       <Login/>
     </div>
   </div>
@@ -22,9 +24,20 @@ export default {
 <style class="scss">
 .container {
   display: grid;
-
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 50px;
+  grid-template-areas: "header"
+                       "main";
+  justify-self: center;
 }
-.login {
-  margin: 0 auto;
+
+.container__header {
+  grid-area: header;
+  padding: 0 20px;
+}
+
+.container__main {
+  grid-area: main;
+  justify-self: center;
 }
 </style>

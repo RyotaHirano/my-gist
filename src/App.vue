@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Top/>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -16,6 +16,10 @@ export default {
 </script>
 
 <style lang="scss">
+html, body {
+  margin: 0;
+}
+
 button,
 input,
 select,
