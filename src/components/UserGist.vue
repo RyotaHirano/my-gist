@@ -4,6 +4,22 @@
 
 <script>
 export default {
-  name: 'gist'
+  name: 'user-gist',
+
+  beforeMount() {
+    if(!this.isAuthorized()) {
+      this.$router.push('/')
+    }
+  },
+
+  methods: {
+    isAuthorized: function() {
+      return this.$store.state.githubAccessToken !== '' && this.$store.state.githubAccessToken !== null
+    },
+
+    fetchGist: function() {
+
+    }
+  }
 }
 </script>
